@@ -4,10 +4,10 @@ import json
 import os
 
 token = os.getenv("ADS_DEV_KEY", "")
-
-
+print(token)
 def get_metrics():
     url = "https://api.adsabs.harvard.edu/v1/metrics"
+#    url = "https://ui.adsabs.harvard.edu/
     bibcodes = []
     with open("bibcodes.txt", "r") as f:
         for line in f.readlines():

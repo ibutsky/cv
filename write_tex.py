@@ -30,13 +30,13 @@ def format_pub(args):
         fmt = "\\item[{{\\color{{numcolor}}\\scriptsize\\bfseries{0}}}] ".format(cites)
     else:
         fmt = "\\item[{{\\color{{numcolor}}\\scriptsize{0}}}] ".format(cites)
-    n = [i for i in range(len(pub["authors"])) if "Luger, R" in pub["authors"][i]][0]
-    pub["authors"][n] = "\\textbf{Luger, R.}"
+    n = [i for i in range(len(pub["authors"])) if "Butsky, I" in pub["authors"][i]][0]
+    pub["authors"][n] = "\\textbf{Butsky, I.}"
     if len(pub["authors"]) > 5:
         fmt += ", ".join(pub["authors"][:4])
         fmt += ", \etal"
         if n >= 4:
-            fmt += "\\ (including\\ \\textbf{Luger, R.})"
+            fmt += "\\ (including\\ \\textbf{Butsky, I.})"
     elif len(pub["authors"]) > 1:
         fmt += ", ".join(pub["authors"][:-1])
         fmt += ", \\& " + pub["authors"][-1]
@@ -76,13 +76,13 @@ def format_talk(args):
     ind, talk = args
 
     fmt = "\\item"
-    n = [i for i in range(len(talk["authors"])) if "Luger, R" in talk["authors"][i]][0]
-    talk["authors"][n] = "\\textbf{Luger, R.}"
+    n = [i for i in range(len(talk["authors"])) if "Butsky, I" in talk["authors"][i]][0]
+    talk["authors"][n] = "\\textbf{Butsky, I.}"
     if len(talk["authors"]) > 5:
         fmt += ", ".join(talk["authors"][:4])
         fmt += ", \etal"
         if n >= 4:
-            fmt += "\\ (including\\ \\textbf{Luger, R.})"
+            fmt += "\\ (including\\ \\textbf{Butsky, I.})"
     elif len(talk["authors"]) > 1:
         fmt += ", ".join(talk["authors"][:-1])
         fmt += ", \\& " + talk["authors"][-1]
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     # Compute citation stats
     ntotal = len(ref) + len(unref)
     npapers = len(ref)
-    nfirst = sum(1 for p in pubs if "Luger, R" in p["authors"][0])
+    nfirst = sum(1 for p in pubs if "Butsky, I" in p["authors"][0])
     tmp = [p["citations"] if p["citations"] is not None else 0 for p in pubs]
     cites = sorted(tmp, reverse=True)
     ncitations = sum(cites)

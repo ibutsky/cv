@@ -72,6 +72,8 @@ def plot_stars(ax, year1=2015):
     times = []
     for star in stars:
         times.append(parser.parse(star["starred_at"]))
+    times = [2015]
+    stars = [1]
     tzinfo = times[0].tzinfo
     years = range(year1, datetime.now().year + 1)
     now = datetime(
@@ -154,7 +156,7 @@ def make_plots():
     fig.subplots_adjust(wspace=0.6)
     plot_papers(ax[0])
     plot_cites(ax[1])
-    plot_stars(ax[2])
+#    plot_stars(ax[2])
     plot_metrics(ax[3])
     for axis in ax[4:]:
         axis.axis("off")

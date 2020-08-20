@@ -10,7 +10,7 @@ def get_repo_stars(repo, maxpages=5):
     params = []
     for page in range(1, maxpages + 1):
         req = Request(
-            "https://api.github.com/repos/rodluger/%s/stargazers?page=%d&per_page=100"
+            "https://api.github.com/repos/ibutsky/%s/stargazers?page=%d&per_page=100"
             % (repo, page)
         )
         req.add_header("Accept", "application/vnd.github.v3.star+json")
@@ -24,7 +24,7 @@ def get_repo_stars(repo, maxpages=5):
     return params
 
 
-def get_all_stars(repos=["starry", "everest", "planetplanet", "cortex", "Limbdark.jl"]):
+def get_all_stars(repos=["thermal_instabilities"]):
     stars = []
     for repo in repos:
         stars += get_repo_stars(repo)
@@ -34,7 +34,7 @@ def get_all_stars(repos=["starry", "everest", "planetplanet", "cortex", "Limbdar
 
 def get_repo_stats(repo):
     req = Request(
-        "https://api.github.com/repos/rodluger/%s/stats/participation" % (repo)
+        "https://api.github.com/repos/ibutsky/%s/stats/participation" % (repo)
     )
     content = urlopen(req).read()
     par = json.loads(content)
