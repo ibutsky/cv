@@ -109,12 +109,13 @@ def get_papers(author, count_cites=True):
     bibcodes = []
 
     for paper in papers:
-
         if not (
             ("Butsky, Iryna" in paper.author)
             or ("Butsky, I." in paper.author)
             or ("Butusky, I" in paper.author)
+            or ("Butsky, Iryna S." in paper.author)                
         ):
+            print("Skipping author: ", paper.author)
             continue
 
         if manual_exclude(paper):
@@ -190,5 +191,5 @@ def get_papers(author, count_cites=True):
 
 if __name__ == "__main__":
     papers = get_papers("Butsky, I", count_cites=True)
-    with open("pubs_iryna.json", "w") as f:
+    with open("pubs.json", "w") as f:
         json.dump(papers, f, sort_keys=True, indent=2, separators=(",", ": "))

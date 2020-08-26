@@ -84,10 +84,10 @@
 
 \newcommand{\header}{%
   {
-  \vspace*{-1in}
-  \hspace*{-2.125in}
+  \vspace*{-1.02in}
+  \hspace*{-2.42in}
   \centering
-  \includegraphics[width=0.95\paperwidth]{header.pdf}
+  \includegraphics[width=\paperwidth]{header.pdf}
   \vspace*{-0.1in}
   }
 }
