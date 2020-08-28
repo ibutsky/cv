@@ -11,12 +11,19 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 import numpy as np
 from operator import itemgetter
+import palettable
 
 lato = fm.FontProperties(fname="fonts/Lato-Regular.ttf")
 
 
 __all__ = ["make_plots"]
 
+cmap = matplotlib.cm.get_cmap('bone_r') #same cmap as header image
+c1 = cmap(0.25)
+c2 = cmap(0.5)
+c3 = cmap(0.75)
+cpal = [c1, c2, c3]
+alpha =0.8
 
 def plot_cites(ax, year1=2015):
     """Plot citation dates histogram."""
@@ -24,8 +31,8 @@ def plot_cites(ax, year1=2015):
     hist, bin_edges = np.histogram(citedates, bins=15)
     cdf = np.cumsum(hist)
     bins = 0.5 * (bin_edges[1:] + bin_edges[:-1])
-    ax.plot(bins, cdf, ".", color="C1", ms=3)
-    ax.plot(bins, cdf, "-", color="C1", lw=3, alpha=0.5)
+    ax.plot(bins, cdf, ".", color=cpal[1], ms=3)
+    ax.plot(bins, cdf, "-", color=cpal[1], lw=3, alpha=alpha)
     plt.setp(
         ax.get_xticklabels(), rotation=30, fontsize=10, fontproperties=lato, alpha=0.75
     )
@@ -43,13 +50,13 @@ def plot_cites(ax, year1=2015):
 def plot_metrics(ax, year1=2015):
     with open("metrics.json") as json_file:
         metrics = json.load(json_file)
-    for i, metric in enumerate(["h", "g", "i10"]):
+    for i, metric in enumerate(["g", "h", "i10"]):
         x, y = np.array(sorted(metrics["time series"][metric].items()), dtype=float).T
         inds = x >= 2015
         x = x[inds]
         y = y[inds]
-        ax.plot(x, y, ".", color="C%d" % i, ms=3)
-        ax.plot(x, y, "-", color="C%d" % i, lw=3, alpha=0.5, label=metric)
+        ax.plot(x, y, ".", color=cpal[i], ms=3)
+        ax.plot(x, y, "-", color=cpal[i], lw=3, alpha=alpha, label=metric)
     plt.setp(
         ax.get_xticklabels(), rotation=30, fontsize=10, fontproperties=lato, alpha=0.75
     )
@@ -64,6 +71,28 @@ def plot_metrics(ax, year1=2015):
     ax.set_xlabel("year", fontsize=16)
     ax.set_xlim(year1, datetime.now().year + 1)
 
+def plot_read10(ax, year1=2015):
+    with open("metrics.json") as json_file:
+        metrics = json.load(json_file)
+    for i, metric in enumerate(["read10"]):
+        x, y = np.array(sorted(metrics["time series"][metric].items()), dtype=float).T
+        inds = x >= 2015
+        x = x[inds]
+        y = y[inds]
+        ax.plot(x, y, ".", color=cpal[2], ms=3)
+        ax.plot(x, y, "-", color=cpal[2], lw=3, alpha=alpha)
+    plt.setp(
+        ax.get_xticklabels(), rotation=30, fontsize=10, fontproperties=lato, alpha=0.75
+    )
+    plt.setp(
+        ax.get_yticklabels(), rotation=30, fontsize=10, fontproperties=lato, alpha=0.75
+    )
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    for tick in ax.get_xticklabels() + ax.get_yticklabels():
+        tick.set_fontsize(10)
+    ax.set_ylabel("read10", fontsize=16)
+    ax.set_xlabel("year", fontsize=16)
+    ax.set_xlim(year1, datetime.now().year + 1)
 
 def plot_stars(ax, year1=2015):
     """Plot stargazers histogram."""
@@ -98,7 +127,7 @@ def plot_stars(ax, year1=2015):
                     pass
     inds = np.array(np.linspace(0, len(bins) - 1, 20), dtype=int)
     ax.plot_date(np.array(bins)[inds], np.array(counts)[inds], ".", color="C2", ms=3)
-    ax.plot_date(bins, counts, "-", color="C2", lw=3, alpha=0.5)
+    ax.plot_date(bins, counts, "-", color="C2", lw=3, alpha=alpha)
 
     plt.setp(
         ax.get_xticklabels(), rotation=30, fontsize=10, fontproperties=lato, alpha=0.75
@@ -135,8 +164,8 @@ def plot_papers(ax, year1=2015):
     hist, bin_edges = np.histogram(pubdates, bins=15)
     cdf = np.cumsum(hist)
     bins = 0.5 * (bin_edges[1:] + bin_edges[:-1])
-    ax.plot(bins, cdf, ".", color="C0", ms=3)
-    ax.plot(bins, cdf, "-", color="C0", lw=3, alpha=0.5)
+    ax.plot(bins, cdf, ".", color=cpal[0], ms=3)
+    ax.plot(bins, cdf, "-", color=cpal[0], lw=3, alpha=alpha)
     plt.setp(
         ax.get_xticklabels(), rotation=30, fontsize=10, fontproperties=lato, alpha=0.75
     )
@@ -156,7 +185,7 @@ def make_plots():
     fig.subplots_adjust(wspace=0.6)
     plot_papers(ax[0])
     plot_cites(ax[1])
-#    plot_stars(ax[2])
+    plot_read10(ax[2])
     plot_metrics(ax[3])
     for axis in ax[4:]:
         axis.axis("off")

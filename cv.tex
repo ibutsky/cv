@@ -25,7 +25,6 @@
 \newfontfamily{\FA}[Path = fonts/]{fontawesome-webfont}
 
 \usepackage{ragged2e}
-
 \usepackage{marginnote}
 
 \def\faEnvelope{{\FA\symbol{"F0E0}}}
@@ -40,38 +39,37 @@
 \header
 
 %----------------------------------------------------------------------------------------
-%	COORDINATES
+%	CONTACT
 %----------------------------------------------------------------------------------------
 
-\aside{contact}{0.0325}{
+\aside{contact}{0.08}{
     %
     \vspace*{-0.1cm}
     %
-    \href{mailto:ibutsky@uw.edu}{{\addfontfeature{Color=linkblue}ibutsky@uw.edu}\ \faEnvelope}\\[0.5em]
+    \href{mailto:ibutsky@uw.edu}{\faEnvelope $\;$ ibutsky@uw.edu }\\[0.5em]
     %
-    \href{https://github.com/ibutsky}{{\addfontfeature{Color=linkblue}github.com/ibutsky}\ \faGithub}\\[0.5em]
+    \href{https://github.com/ibutsky}{\faGithub $\;$ github.com/ibutsky}\\[0.5em]
     %
-    \href{https://www.irynabutsky.me}{{\addfontfeature{Color=linkblue}irynabutsky.me}\ \faHandPointerO}\\[0.5em]
+    \href{https://www.irynabutsky.me}{\faHandPointerO $\;$ irynabutsky.me}\\[0.5em]
     %
-    \href{tel:610-675-6056}{{\addfontfeature{Color=linkblue}+1 (408) 833 8186}\ \faPhone}\\[0.5em]
+    \href{tel:610-675-6056}{\faPhone $\;$ +1 (408) 833 8186}\\[0.5em]
     %
-    \href{https://goo.gl/maps/MEFbNUnyeJ7ZCxfx7}{{\addfontfeature{Color=linkblue}\small University of Washington }\\
-    \href{https://goo.gl/maps/MEFbNUnyeJ7ZCxfx7}{{\addfontfeature{Color=linkblue}\small Seattle, WA}}\ \faMapMarker}
+  %  \href{https://goo.gl/maps/MEFbNUnyeJ7ZCxfx7}{{\addfontfeature{Color=linkblue}\small University of Washington }\\
+  %  \href{https://goo.gl/maps/MEFbNUnyeJ7ZCxfx7}{{\addfontfeature{Color=linkblue}\small Seattle, WA}}\ \faMapMarker}
     %
 }
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-
+%\vspace*{-.2cm}
 \section{education}
-
 \begin{entrylist}
 
 %------------------------------------------------
 
 \entry
-{2015--}
+{2017--}
 {PhD {\normalfont Astronomy}}
 {University of Washington, Seattle WA}
 {%
@@ -85,59 +83,59 @@
 
 \entry
 {2015--2017}
-{MSc {\normalfont Astronomy}}
+{MSc {\normalfont Astronomy} \vspace{-1em}}
 {University of Washington, Seattle WA}
-
 %------------------------------------------------
 
 \entry
 {2010--2014}
 {BS {\normalfont Astrophysics}}
 {California Institute of Technology, Pasadena, CA}
-
 %------------------------------------------------
 
 \end{entrylist}
-
+\vspace*{-.4cm}
 %----------------------------------------------------------------------------------------
 %	ABOUT
 %----------------------------------------------------------------------------------------
 
-\aside{about}{0.0325}{
+\aside{about}{0.03}{
     \footnotesize
-    \mbox{I am a graduate student at the}
-    \mbox{University of Washington. TODO}
-    %\mbox{the~Center~for~Computational}
-    %\mbox{Astrophysics~in~New~York~City,}
-    %\mbox{working~on~finding~novel~ways}
-    %\mbox{to~discover~and~characterize}
-    %\mbox{exoplanets.~I~am~broadly~inter-}
-    %\mbox{ested~in~exocartography,~astro-}
-    %\mbox{biology,~systematics~modeling,}
-    %\mbox{\&~general~analytic~techniques}
-    %\mbox{for~astronomy.~Outside~of~the}
-    %\mbox{office~I~love~to~hike,~cycle,~swim,}
-    %\mbox{craft~lattes,~faulty~parallelism,}
-    %\mbox{and~Oxford~commas.}
+    \mbox{I am a PhD candidate at the}
+    \mbox{University~of~Washington}
+    \mbox{using simulations to }
+    \mbox{understand galaxy evolution.}
+    \mbox{I am broadly interested in }
+    \mbox{1) the galactic baryon cycle}
+    \mbox{and the structure of the}
+    \mbox{circumgalactic medium,}
+    \mbox{2) how cosmic rays interact }
+    \mbox{with gas in various regimes }
+    \mbox{and its implications for galaxy }
+    \mbox{evolution, and 3) improving}
+    \mbox{existing approximations of the }
+    \mbox{subgrid models that govern }
+    \mbox{galaxy evolution.}
 }
 
 %----------------------------------------------------------------------------------------
 %	POSITIONS
 %----------------------------------------------------------------------------------------
+%\begin{changemargin}{-4.5cm}{4.5cm}
 \section{positions}
 \begin{entrylist}
 
 %------------------------------------------------
 
 \entry
-{2015--}
+{2016--}
 {Research Associate}
-{University of Washington}
+{University of Washington, Seattle, WA}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Implemented cosmic ray physics in both \texttt{enzo} and \texttt{ChaNGa} simulation codes.
-\item Developed analysis pipeline to analyze simulations using synthetic spectroscopy
+\item Implemented cosmic ray physics in \texttt{enzo} and \texttt{ChaNGa} simulation codes.
+\item Ran and analyzed various types of CGM simulations
 \end{list}
 }
 
@@ -145,12 +143,12 @@
 
 \entry
 {2019--2020}
-{Flatiron Pre-Doctoral Fellow}
+{Research Analyst}
 {Center for Computational Astrophysics, New York, NY}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Implemented idealized boundary conditions and cooling function in \texttt{enzo} simulation code.
+%\item Implemented idealized boundary conditions and cooling function in \texttt{enzo} simulation code.
 \item Ran the first suite of 3D simulations stuyding the impact of cosmic rays on thermal instability in a stratified medium
 \end{list}
 }
@@ -160,12 +158,11 @@
 \entry
 {2014--2015}
 {Research Assistant}
-{KIPAC/SLAC Linear Accelerator Laboratory}
+{KIPAC/SLAC, Menlo Park, CA}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Implemented magnetic supernova feedback in \texttt{enzo} simulation code
-\item Demonstrated how magnetic supernova feedback is sufficient to explan observed galactic magnetic fields
+\item Implemented magnetic supernova feedback in \texttt{enzo} and demonstrated how supernovae seed galactic magnetic field growth
 \end{list}
 }
 
@@ -173,20 +170,20 @@
 
 \ifdefined \onepage \else
 \entry
-{06/2013--09/2013}
+{2013}
 {Summer Undergraduate Research Fellow}
-{Max Planck Institute for Astronomy}
+{MPIA, Heidelberg, Germany}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Demonstrated the impact of baryons on dark matter halo properties in the NIHAO simulations
+\item Quantified impact of baryons on dark matter halos in the NIHAO simulations
 \end{list}
 }
 %------------------------------------------------
 
 \ifdefined \onepage \else
 \entry
-{06/2012--09/2012}
+{2012}
 {Summer Undergraduate Research Fellow}
 {California Institute of Technology}
 {%
@@ -200,8 +197,8 @@
 
 \ifdefined \onepage \else
 \entry
-{06/2011--09/2011}
-{Summer Undergraduate Research Fellow}
+{2011}
+{LIGO Summer Undergraduate Research Fellow}
 {California Institute of Technology}
 {%
 \vspace{-1em}
@@ -214,37 +211,57 @@
 %------------------------------------------------
 
 \end{entrylist}
+%\end{changemargin}
 
 %----------------------------------------------------------------------------------------
-%	STATS
+%    Developer
 %----------------------------------------------------------------------------------------
+\aside{developer}{-2.5}{
+%\vspace*{0.5em}
+\texttt{enzo} \hfill {\footnotesize 2014 --} \\
+\begin{list}{{\footnotesize $+$}}{\asidelist}
+\item {\footnotesize Added cosmic rays to the MHD Riemann solvers along with anisotropic diffusion and streaming }\\[0.5em]
+\item {\footnotesize Implemented magnetic supernova feedback}\\[0.5em]
+\end{list}
 
-\aside{stats}{0.075}{
-    \vspace*{0.5em}
-    \input{pubs_summary}
+\texttt{ChaNGa} \hfill {\footnotesize 2015 --}\\
+\begin{list}{{\footnotesize $+$}}{\asidelist}
+\item {\footnotesize Added cosmic rays as a second fluid, including advetion and isotropic diffusion}
+\item {\footnotesize Implemented an improved artificial viscosity method}\\[0.5em]
+\end{list}
 }
 
 %----------------------------------------------------------------------------------------
 %	AWARDS
 %----------------------------------------------------------------------------------------
 
-\section{honors}
+\section{grants and awards}
 
 \begin{entrylist}
 
 \entry
-{2018--2021}
-{Flatiron Fellowship}
-{Center for Computational Astrophysics, New York, NY}
+{2019}
+{(Co-PI) NASA HST Legacy (AR-15800)}
+{\$229,503}
 {%
 \vspace*{-0.75em}
 }
 
 %------------------------------------------------
+\entry
+{2019}
+{Flatiron Pre-Doctoral Fellow}
+{\$21,684}
+{%
+\vspace*{-0.75em}
+}
+
+%------------------------------------------------
+
 \entry
 {2018}
-{Hubble Postdoctoral Fellowship}
-{(Declined)}
+{Blue Waters Allocation Renewal}
+{50,000 node-hours}
 {%
 \vspace*{-0.75em}
 }
@@ -252,9 +269,9 @@
 %------------------------------------------------
 
 \entry
-{2018}
-{51 Pegasi b Fellowship}
-{(Declined)}
+{2017}
+{(Co-I) NASA HST (AR-15046)}
+{25,000 SUs on Pleiades and \$123,352}
 {%
 \vspace*{-0.75em}
 }
@@ -262,19 +279,9 @@
 %------------------------------------------------
 
 \entry
-{2012--2015}
-{ARCS Fellowship}
-{University of Washington}
-{%
-\vspace*{-0.75em}
-}
-
-%------------------------------------------------
-
-\entry
-{2010}
-{Bobby Berman Memorial Prize}
-{Swarthmore College}
+{2016}
+{Blue Waters Graduate Fellow}
+{50,000 node-hours on Blue Waters and \$50,000}
 {%
 \vspace*{-0.75em}
 }
@@ -283,10 +290,17 @@
 
 \ifdefined \onepage \else
 \entry
-{2010}
-{The Phi Beta Kappa Society}
-{Swarthmore College}
-{}
+{2013}
+{Flintridge Foundation SURF Fellow}
+{\$6,000}
+{%
+\vspace*{-0.75em}}
+
+\entry
+{2012}
+{Nellie Bergen and Adrian Foster Tillotson SURF Fellow}
+{\$6,000}
+{\vspace*{-0.75em}}
 \fi
 
 %------------------------------------------------
@@ -294,18 +308,13 @@
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	SOFTWARE
+%    STATS
 %----------------------------------------------------------------------------------------
 
-\aside{popular code}{0.0325}{
-    \href{https://github.com/rodluger/starry}{\texttt{starry}}\\
-    Analytic light curves\\[0.3em]
-    \href{https://github.com/rodluger/planetplanet}{\texttt{planetplanet}}\\
-    P-P occultations\\[0.3em]
-    \href{https://github.com/rodluger/everest}{\texttt{everest}}\\
-    \emph{K2} de-trending\\
+\aside{stats}{0.075}{
+    \vspace*{0.5em}
+    \input{pubs_summary}
 }
-
 %----------------------------------------------------------------------------------------
 %	METRICS
 %----------------------------------------------------------------------------------------
@@ -321,23 +330,38 @@
 \fi
 
 %----------------------------------------------------------------------------------------
-%	Refs
+%    Students
 %----------------------------------------------------------------------------------------
 
 \ifdefined \onepage \else
-\aside{references}{0.05}{
+\aside{students}{0.05}{
     %\vspace*{0.5em}
-    \textbf{Tom Quinn}\\
-    {\footnotesize trq@uw.edu}\\[0.5em]
+    \textbf{Joseph Breneman}\\
+    {\footnotesize UW, 2019--}\\[0.5em]
+    
+    \textbf{Daniel Piacitelli}\\
+    {\footnotesize UW, 2018--}\\[0.5em]
+    
+    \textbf{Daven Cocroft}\\
+    {\footnotesize UW, 2018-2019}\\[0.5em]
+    
+    \textbf{Shreya Nakum}\\
+    {\footnotesize GetMAGIC, 2018-2019}\\[0.5em]
+    
+    \textbf{Joshua Smith}\\
+    {\footnotesize UW, 2018}\\[0.5em]
+    
+    \textbf{Jasmine Smith}\\
+    {\footnotesize UW PreMAP, 2018}\\[0.5em]
+    
+    \textbf{Julia Jansen}\\
+    {\footnotesize UW, 2017-2018}\\[0.5em]
 
-    \textbf{Jessica Werk}\\
-    {\footnotesize jwerk@uw.edu}\\[0.5em]
+    \textbf{Eliana Sisman}\\
+    {\footnotesize GetMAGIC, 2017-2018}\\[0.5em]
 
-    \textbf{Chris Hayward}\\
-    {\footnotesize chayward@flatironinstitute.org}\\[0.5em]
-
-    \textbf{Cameron Hummels}\\
-    {\footnotesize chummels@caltec.edu}
+    \textbf{Tessa Pargiter-Hatem}\\
+    {\footnotesize UW PreMAP, 2017}\\[0.5em]
 }
 \fi
 
@@ -352,55 +376,70 @@
 %------------------------------------------------
 
 \entry
-{2019-}
-{Mentor, AstroCom}
-{AMNH / CUNY}
+{2017-2019}
+{Mentor, GetMAGIC}
+{Remote}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Mentor undergraduate students from underrepresented groups in the sciences
-at the City University of New York
+\item Mentored middle and high school girls in computational astronomy projects
 \end{list}
 }
 
 %------------------------------------------------
 
 \entry
-{2019-}
-{Lecturer, LSST Data Science Fellowship}
-{Carnegie Mellon / Flatiron Institute}
-{%
-\vspace{-1em}
-\begin{list}{$+$}{\cvlist}
-\item Lectured on various topics related to statistical 
-inference at week-long schools for early-career astronomers
-\end{list}
-}
-
-%------------------------------------------------
-
-\entry
-{2012--2017}
-{Mobile Planetarium}
+{2017-2019}
+{Mentor and Volunteer, PreMAP}
 {University of Washington}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Presented planetarium shows at schools and public venues throughout
-Washington state using UW's inflatable mobile planetarium
+\item Mentored undergraduate students from in compuational astronomy research projects.
+\item Organized overnight field trip to LIGO in Livingston, WA
 \end{list}
 }
 
 %------------------------------------------------
 
 \entry
-{2012--2013}
-{Teaching Assistant}
+{2012--2019}
+{Teaching Assistant (9 quarters)}
+{Caltech / University of Washington}
+{%
+\vspace{-1em}
+\begin{list}{$+$}{\cvlist}
+\item ASTR 101, "The Evolving Universe" (online) UW, Spring 2019
+\item ASTR 101, "The Evolving Universe", UW Fall 2015, Spring 2016
+\item ASTR 150, "Planets", UW Winter 2016
+\item Ay 1, "Intro to Astronomy", Caltech Spring 2012, 2013, 2014
+\item Ay 21, "Galaxies and Cosmology" (online), Caltech Winter 2013, 2014
+\end{list}
+}
+
+%------------------------------------------------
+
+\entry
+{2017--2018}
+{UW EquiTea Organizer}
 {University of Washington}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Taught two bi-weekly tutorial sessions for two college astronomy courses
+\item Organized and led quarterly discussions on equity and inclusion
+\end{list}
+}
+
+%------------------------------------------------
+
+\entry
+{2016--2018}
+{UW Astronomy Major Mentor}
+{University of Washington}
+{%
+\vspace{-1em}
+\begin{list}{$+$}{\cvlist}
+\item Met monthly with two undergraduate students to discuss schoolwork and research
 \end{list}
 }
 
@@ -417,19 +456,13 @@ Washington state using UW's inflatable mobile planetarium
 %------------------------------------------------
 
 \entry
-{2010--2012}
-{High School Teacher}
-{St. Luke's School, New Canaan CT}
+{2011--2014}
+{Caltech Y RISE Tutor}
+{California Institute of Technology}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Created and taught a rigorous, college-level elective course in astrophysics
-aimed at seniors interested in pursuing college classes in the field
-\item Taught three sections of 11th grade physics with a focus on
-astronomy
-\ifdefined \onepage \else
-, helping students develop critical thinking and creative
-problem solving skills
+\item Tutored local high school students in math, physics, and SAT preparation
 \fi
 \end{list}
 }
@@ -438,14 +471,13 @@ problem solving skills
 
 \ifdefined \onepage \else
 \entry
-{2009--2010}
-{Science Associate \& Tutor}
-{Swarthmore College}
+{2012}
+{InnoWorks Mentor}
+{Pasadena, CA}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Directed weekly large-group study sessions for an introductory course in
-astronomy; tutored students in courses in mechanics and E\&M
+\item Taught at a week-long science camp for middle school students
 \end{list}
 }
 \fi
@@ -454,24 +486,28 @@ astronomy; tutored students in courses in mechanics and E\&M
 
 \end{entrylist}
 
+
+
 %----------------------------------------------------------------------------------------
-%	Students
+%    Refs
 %----------------------------------------------------------------------------------------
 
 \ifdefined \onepage \else
-\aside{students}{0.05}{
+\aside{references}{-1}{
     %\vspace*{0.5em}
-    \textbf{nicholas saunders}\\
-    {\footnotesize UW, 2016-2018}\\[0.5em]
+    \textbf{Tom Quinn}\\
+    {\footnotesize trq@uw.edu}\\[0.5em]
 
-    \textbf{brynner hidalgo}\\
-    {\footnotesize CUNY, 2019}\\[0.5em]
+    \textbf{Jessica Werk}\\
+    {\footnotesize jwerk@uw.edu}\\[0.5em]
 
-    \textbf{asmaa elsayed}\\
-    {\footnotesize CUNY, 2019-}\\[0.5em]
+    \textbf{Chris Hayward}\\
+    {\footnotesize chayward@\\flatironinstitute.org}\\[0.5em]
+
+    \textbf{Cameron Hummels}\\
+    {\footnotesize chummels@caltech.edu}
 }
 \fi
-
 
 %----------------------------------------------------------------------------------------
 %	OTHER
@@ -485,40 +521,39 @@ astronomy; tutored students in courses in mechanics and E\&M
     %------------------------------------------------
 
     \entry
-    {2013--2017}
-    {IT Manager}
-    {Virtual Planet Laboratory, University of Washington}
+    {2012--2013}
+    {Caltech Dance Troupe President}
+    {California Institute of Technology}
     {%
     \vspace{-1em}
     \begin{list}{$+$}{\cvlist}
-    \item Managed VPL's virtual conferencing system and network
+    \item Organized various dance classes for the Caltech community
     \end{list}
     }
 
     %------------------------------------------------
 
     \entry
-    {2010--2012}
-    {Head Coach}
-    {St. Luke's School, New Canaan CT}
+    {2011--2012}
+    {Caltech Fleming House Social Team}
+    {California Institute of Technology}
     {%
     \vspace{-1em}
     \begin{list}{$+$}{\cvlist}
-    \item Head coach of the JV Boys Soccer and Fencing Teams
-    \item Assistant coach of the MS Tennis Team
+    \item Organized monthly events for a communitiy of ~80 people
     \end{list}
     }
 
     %------------------------------------------------
 
     \entry
-    {2009--2010}
-    {Captain}
-    {Swarthmore College Fencing Team}
+    {}
+    {Languages}
+    {}
     {%
     \vspace{-1em}
     \begin{list}{$+$}{\cvlist}
-    \item Captain and founding member of the Sabre Team
+    \item Ukrainian (native), Russian (native), French (conversational), Spanish (conversational), German (intermediate)
     \end{list}
     }
 
@@ -530,15 +565,19 @@ astronomy; tutored students in courses in mechanics and E\&M
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-
+\begin{changemargin}{-4.5cm}{0cm}
 \ifdefined \withpubs
     %
-    \aside{}{0.86}{
-        {\footnotesize citations $\longrightarrow$}\\[0em]
-        {\footnotesize (refereed in \textbf{bold})}
+    \floattext{}{-5}{0}{
+      %  {\footnotesize citations}\\[0em]
+      %  {\footnotesize $\big\downarrow$}
+       % {\footnotesize (refereed in \textbf{bold})}
     }
     %
-    \section{publications}
+
+    \section{publications {\footnotesize \normalfont (citation count on left)}}
+\end{changemargin}
+\begin{changemargin}{-4.1cm}{0cm}
     %
     \begin{list}{}{\pubslist}
         \input{pubs}
@@ -546,11 +585,11 @@ astronomy; tutored students in courses in mechanics and E\&M
     %
     \vspace{1em}
 \fi
-
+\end{changemargin}
 %----------------------------------------------------------------------------------------
 %	TALKS
 %----------------------------------------------------------------------------------------
-
+\begin{changemargin}{-4.5cm}{0cm}
 \ifdefined \withtalks
     \section{selected talks}
     %
@@ -558,5 +597,6 @@ astronomy; tutored students in courses in mechanics and E\&M
         \input{talks}
     \end{list}
 \fi
+\end{changemargin}
 
 \end{document}
