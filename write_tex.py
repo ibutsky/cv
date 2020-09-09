@@ -134,7 +134,7 @@ if __name__ == "__main__":
         "h-index & \\textbf{{{4}}}"
     ).format(ntotal, npapers, nfirst, ncitations, hindex)
     summary = (
-        "\\begin{table}\\begin{tabular}{rr}" + summary + "\\end{tabular}\\end{table}"
+        "\\begin{table}\\begin{tabular}{lr}" + summary + "\\end{tabular}\\end{table}"
     )
     with open("pubs_summary.tex", "w") as f:
         f.write(summary)
