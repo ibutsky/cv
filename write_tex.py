@@ -20,7 +20,7 @@ JOURNAL_MAP = {
 }
 
 
-def format_pub(args):
+def format_pub(args, maxauthors=10):
     ind, pub = args
 
     cites = pub["citations"]
@@ -32,8 +32,8 @@ def format_pub(args):
         fmt = "\\item[{{\\color{{numcolor}}\\scriptsize{0}}}] ".format(cites)
     n = [i for i in range(len(pub["authors"])) if "Butsky, I" in pub["authors"][i]][0]
     pub["authors"][n] = "\\textbf{Butsky, I.}"
-    if len(pub["authors"]) > 5:
-        fmt += ", ".join(pub["authors"][:4])
+    if len(pub["authors"]) > maxauthors+1:
+        fmt += ", ".join(pub["authors"][:maxauthors])
         fmt += ", \etal"
         if n >= 4:
             fmt += "\\ (including\\ \\textbf{Butsky, I.})"
@@ -72,30 +72,31 @@ def format_pub(args):
     return fmt
 
 
-def format_talk(args):
+def format_talk(args, include_authors = False):
     ind, talk = args
-
-    fmt = "\\item"
-    n = [i for i in range(len(talk["authors"])) if "Butsky, I" in talk["authors"][i]][0]
-    talk["authors"][n] = "\\textbf{Butsky, I.}"
-    if len(talk["authors"]) > 5:
-        fmt += ", ".join(talk["authors"][:4])
-        fmt += ", \etal"
-        if n >= 4:
-            fmt += "\\ (including\\ \\textbf{Butsky, I.})"
-    elif len(talk["authors"]) > 1:
-        fmt += ", ".join(talk["authors"][:-1])
-        fmt += ", \\& " + talk["authors"][-1]
-    else:
-        fmt += talk["authors"][0]
+    fmt = "\\item[{{\\color{{numcolor}}\\scriptsize\\bfseries{0}}}] ".format(ind)
+    if include_authors:
+        n = [i for i in range(len(talk["authors"])) if "Butsky, I" in talk["authors"][i]][0]
+        talk["authors"][n] = "\\textbf{Butsky, I.}"
+        if len(talk["authors"]) > 5:
+            fmt += ", ".join(talk["authors"][:4])
+            fmt += ", \etal"
+            if n >= 4:
+                fmt += "\\ (including\\ \\textbf{Butsky, I.})"
+        elif len(talk["authors"]) > 1:
+            fmt += ", ".join(talk["authors"][:-1])
+            fmt += ", \\& " + talk["authors"][-1]
+        else:
+            fmt += talk["authors"][0]
+        fmt += ", "
 
     if not talk["url"] is None:
-        fmt += ", \\link{{{0}}}{{{1}}}".format(talk["url"], talk["title"])
+        fmt += "\\link{{{0}}}{{{1}}}".format(talk["url"], talk["title"])
     else:
-        fmt += ", \\emph{{{0}}}".format(talk["title"])
+        fmt += "\\emph{{{0}}}".format(talk["title"])
 
     fmt += ", {0}".format(talk["event"])
-    fmt += ", {0}".format(talk["location"])
+    fmt += ", \\textbf{{{0}}}".format(talk["location"])
 
     YMD = [int(i) for i in talk["pubdate"].split("-")]
     if len(YMD) == 3:
@@ -125,7 +126,7 @@ if __name__ == "__main__":
     tmp = [p["citations"] if p["citations"] is not None else 0 for p in pubs]
     cites = sorted(tmp, reverse=True)
     ncitations = sum(cites)
-    hindex = sum(c >= i for i, c in enumerate(cites))
+    hindex = sum(c >= (i+1) for i, c in enumerate(cites))
     summary = (
         "Total Pubs & \\textbf{{{0}}}\\\\"
         "Refereed & \\textbf{{{1}}}\\\\"
@@ -140,6 +141,7 @@ if __name__ == "__main__":
         f.write(summary)
 
     # Write pubs
+#    pubs = pubs.
     pubs = list(map(format_pub, zip(range(len(pubs), 0, -1), pubs)))
     with open("pubs.tex", "w") as f:
         f.write("\n\n".join(pubs))
@@ -150,4 +152,12 @@ if __name__ == "__main__":
     talks = sorted(talks, key=itemgetter("pubdate"), reverse=True)
     talks = list(map(format_talk, zip(range(len(talks), 0, -1), talks)))
     with open("talks.tex", "w") as f:
+        f.write("\n\n".join(talks))
+
+    # Get select talks  
+    with open("selected_talks.json", "r") as f:
+        talks = json.load(f)
+    talks = sorted(talks, key=itemgetter("pubdate"), reverse=True)
+    talks = list(map(format_talk, zip(range(len(talks), 0, -1), talks)))
+    with open("selected_talks.tex", "w") as f:
         f.write("\n\n".join(talks))

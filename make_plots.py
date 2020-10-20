@@ -23,6 +23,7 @@ c1 = cmap(0.25)
 c2 = cmap(0.5)
 c3 = cmap(0.75)
 cpal = [c1, c2, c3]
+#cpal = palettable.cmocean.sequential.Tempo_5_r.mpl_colors
 alpha =0.8
 
 def plot_cites(ax, year1=2015):

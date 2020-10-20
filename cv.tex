@@ -33,16 +33,23 @@
 \def\faPhone{{\FA\symbol{"F095}}}
 \def\faHandPointerO{{\FA\symbol{"F25A}}}
 \def\faMapMarker{{\FA\symbol{"F041}}}
-
+\def\faRefresh{{\FA\symbol{"F021}}}
 \begin{document}
 
 \header
+
+\begin{textblock}{5}(9, -.5)
+\begin{flushright}
+\href{https://drive.google.com/file/d/1jmPwFzCnq9RVce5ohDJJBwbIS_fXxH93/view?usp=sharing}{\footnotesize \faRefresh $\;$ Last Updated \today}\\[0em]
+\end{flushright}
+\end{textblock}
+
 
 %----------------------------------------------------------------------------------------
 %	CONTACT
 %----------------------------------------------------------------------------------------
 
-\aside{contact}{0.08}{
+\aside{contact}{-0.22}{
     %
     \vspace*{-0.1cm}
     %
@@ -57,15 +64,15 @@
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-%\vspace*{-.2cm}
+\vspace*{-.3cm}
 \section{education}
 \begin{entrylist}
 
 %------------------------------------------------
 
 \entry
-{2015--}
-{PhD {\normalfont Astronomy (expected June 2021)}}
+{2015--2021}
+{PhD {\normalfont Astronomy (expected)}}
 {University of Washington, Seattle WA}
 {%
 \vspace{-1em}
@@ -94,7 +101,7 @@
 %	ABOUT
 %----------------------------------------------------------------------------------------
 
-\aside{about}{0.03}{
+\aside{about}{0.4}{
     \footnotesize
     \mbox{I am a PhD candidate at the}
     \mbox{University~of~Washington,}
@@ -106,12 +113,11 @@
     \mbox{circumgalactic medium,}
     \mbox{2) how cosmic rays interact }
     \mbox{with gas in various regimes }
-    \mbox{and their impact on for galaxy }
+    \mbox{and their impact on galaxy }
     \mbox{evolution, and 3) improving}
-    \mbox{existing models of the }
-    \mbox{subgrid physics that govern }
-    \mbox{galaxy evolution in simulations.}
-}
+    \mbox{models of subgrid physics in  }
+    \mbox{galaxy simulations.}
+    }
 
 %----------------------------------------------------------------------------------------
 %	POSITIONS
@@ -123,14 +129,15 @@
 %------------------------------------------------
 
 \entry
-{2016--now}
+{2016--2020}
 {Research Assistant}
 {University of Washington}
 {%
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
-\item Implemented cosmic ray physics in \texttt{enzo} and \texttt{ChaNGa} simulation codes
+%\item Implemented cosmic ray physics in \texttt{enzo} and \texttt{ChaNGa} simulation codes
 \item Designed several simulation suites to test impact of cosmic rays on the CGM
+\item Developing subgrid model for unresolved cold gas in galaxy simulations
 \end{list}
 }
 
@@ -213,13 +220,13 @@
 %----------------------------------------------------------------------------------------
 \aside{code}{-2.5}{
 %\vspace*{0.5em}
-\texttt{enzo} \hfill {\footnotesize 2014 --} \\
+\texttt{enzo} \hfill {\footnotesize 2014 -- 2020} \\
 \begin{list}{{\footnotesize $+$}}{\asidelist}
 \item {\footnotesize Added cosmic rays to the MHD Riemann solvers along with anisotropic diffusion and streaming }\\[0.5em]
 \item {\footnotesize Implemented magnetic supernova feedback}\\[0.5em]
 \end{list}
 
-\texttt{ChaNGa} \hfill {\footnotesize 2015 --}\\
+\texttt{ChaNGa} \hfill {\footnotesize 2015 -- 2020}\\
 \begin{list}{{\footnotesize $+$}}{\asidelist}
 \item {\footnotesize Added cosmic rays as a second fluid, including advetion and isotropic diffusion}
 \item {\footnotesize Implemented an improved artificial viscosity method}\\[0.5em]
@@ -230,7 +237,7 @@
 %	AWARDS
 %----------------------------------------------------------------------------------------
 
-\section{grants and awards}
+\section{grants and awards { \small (\$571, 240)}}
 
 \begin{entrylist}
 
@@ -265,7 +272,7 @@
 
 \entry
 {2017}
-{(Co-I) NASA HST (AR-15046)}
+{(Funded co-I) NASA HST (AR-15046)}
 {25,000 SUs on Pleiades and \$123,352}
 {%
 \vspace*{-0.75em}
@@ -360,10 +367,27 @@
 }
 \fi
 
+
+%----------------------------------------------------------------------------------------
+%    OBSERVING
+%----------------------------------------------------------------------------------------
+
+\section{telescope time}
+
+\begin{entrylist}
+\entry
+{2020}
+{(Co-I) Keck II - Keck Cosmic Web Imager - 2020A}
+{1 night}
+{%
+\vspace*{-2em}
+}
+\end{entrylist}
+
 %----------------------------------------------------------------------------------------
 %	TEACHING
 %----------------------------------------------------------------------------------------
-
+\vspace*{-2mm}
 \section{teaching \& outreach}
 
 \begin{entrylist}
@@ -391,7 +415,7 @@
 \vspace{-1em}
 \begin{list}{$+$}{\cvlist}
 \item Mentored undergraduate students in compuational astronomy projects.
-\item Organized overnight field trip to LIGO in Livingston, WA
+\item Organized overnight field trips to UBC (Vancouver) and LIGO (Livingston)
 \end{list}
 }
 
@@ -496,9 +520,8 @@
 %----------------------------------------------------------------------------------------
 %    Refs
 %----------------------------------------------------------------------------------------
-
 \ifdefined \onepage \else
-\aside{references}{-1.2}{
+\aside{references}{-2}{
     %\vspace*{0.5em}
     \textbf{Tom Quinn}\\
     {\footnotesize trq@uw.edu}\\[0.5em]
@@ -514,8 +537,37 @@
     
     \textbf{Philip Hopkins}\\
     {\footnotesize phopkins@caltech.edu}
+    
+    \textbf{Daisuke Nagai}\\
+    {\footnotesize daisuke.nagai@yale.edu}
 }
 \fi
+
+
+%----------------------------------------------------------------------------------------
+%    Media
+%----------------------------------------------------------------------------------------
+
+%\ifdefined \withother
+\vspace*{-2mm}
+\section{media}
+\begin{entrylist}
+
+\entry
+{2020}
+{RomulusC}
+{}
+{%
+    \vspace{-1em}
+    \begin{list}{$+$}{\cvlist}
+    \item Articles on my 2019 RomulusC paper were published online in Primeur, Newswise,
+         Sciencenewsnet, Long Room, and Phys.org.
+    \item A figure from this work was selected for the 2021 Coalition for
+        Academic Scientific Computation brochure.
+    \end{list}
+}
+\end{entrylist}
+%\fi
 
 %----------------------------------------------------------------------------------------
 %	OTHER
@@ -573,19 +625,13 @@
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\begin{changemargin}{-4.5cm}{0cm}
-\vspace*{1cm}
+%\newpage
+%\vspace*{1cm}
 \ifdefined \withpubs
-    %
-    \floattext{}{-5}{0}{
-      %  {\footnotesize citations}\\[0em]
-      %  {\footnotesize $\big\downarrow$}
-       % {\footnotesize (refereed in \textbf{bold})}
-    }
-    %
-
-    \section{publications {\footnotesize \normalfont (citation count on left)}}
-\end{changemargin}
+    \newpage
+    \begin{changemargin}{-4.5cm}{0cm}
+        \section{refereed publications {\footnotesize \normalfont (citation count on left)}}
+    \end{changemargin}
 \begin{changemargin}{-4.1cm}{0cm}
     %
     \begin{list}{}{\pubslist}
@@ -593,19 +639,42 @@
     \end{list}
     %
     \vspace{1em}
-\fi
 \end{changemargin}
+
+\begin{changemargin}{-4.5cm}{0cm}
+    \section{white papers and other publications}
+\end{changemargin}
+\begin{changemargin}{-4.1cm}{0cm}
+    %
+    \begin{list}{}{\pubslist}
+        \input{other_pubs}
+    \end{list}
+    %
+    \vspace{1em}
+\end{changemargin}
+\fi
 %----------------------------------------------------------------------------------------
 %	TALKS
 %----------------------------------------------------------------------------------------
 \begin{changemargin}{-4.5cm}{0cm}
 \ifdefined \withtalks
-    \section{selected talks}
+    \section{research talks}
+\end{changemargin}
+\begin{changemargin}{-4.1cm}{0cm}
     %
     \begin{list}{}{\pubslist}
         \input{talks}
     \end{list}
 \fi
 \end{changemargin}
+
+
+\ifdefined \withselecttalks
+    \vspace*{-0.7cm}
+    \section{selected talks}
+    \begin{list}{}{\pubslist}
+        \input{selected_talks}
+    \end{list}
+\fi
 
 \end{document}

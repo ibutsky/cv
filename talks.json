@@ -1,4 +1,59 @@
 [{"authors": [ "Butsky, I."],
+     "title": "(scheduled) Cosmic Rays and Thermal Instability in the CGM",
+     "event": "Princeton Galaxy Journal Club",
+     "location": "Princeton, NJ (Zoom)",
+     "url":"",
+     "pubdate": "2020-11"
+},
+    {"authors": [ "Butsky, I."],
+      "title": "(scheduled) Cosmic Rays and Thermal Instability in the CGM",
+      "event": "Caltech TAPIR Seminar",
+      "location": "Pasadena, CA (Zoom)",
+      "url":"",
+      "pubdate": "2020-10"
+    },
+
+     {"authors": [ "Butsky, I."],
+      "title": "(scheduled) Cosmic Rays and Thermal Instability in the CGM",
+      "event": "KIPAC Tea Talk",
+      "location": "Menlo Park, CA (Zoom)",
+      "url":"",
+      "pubdate": "2020-10"
+ },
+
+ {"authors": [ "Butsky, I."],
+      "title": "(scheduled) Cosmic Rays and Thermal Instability in the CGM",
+      "event": "STScI Galaxy Journal Club",
+     "location": "Baltimore, MD (Zoom)",
+      "url":"",
+      "pubdate": "2020-10"
+     },
+     
+    {"authors": [ "Butsky, I."],
+      "title": "Cosmic Rays and Thermal Instability in the CGM",
+      "event": "On the Origin, Nature, and Mixing of Multiphase Gas in Astrophysics",
+      "location": "KITP, Santa Barbara (Zoom)",
+      "url":"",
+      "pubdate": "2020-10"
+ },
+ 
+    {"authors": [ "Butsky, I."],
+      "title": "Cosmic Rays and Thermal Instability in the CGM",
+      "event": "Carnegie Observatories Lunch Talk",
+      "location": "Pasadena, CA (Zoom)",
+      "url":"",
+      "pubdate": "2020-09"
+ },
+ 
+   {"authors": [ "Butsky, I."],
+     "title": "Cosmic Rays and Thermal Instability in the CGM",
+     "event": "The Role of Cosmic Rays in Driving Galactic Outflows (canceled due to COVID-19)",
+     "location": "Chicago, IL",
+ "url":"",
+     "pubdate": "2020-03"
+   },
+ 
+    {"authors": [ "Butsky, I."],
       "title": "Cosmic Rain and Cosmic Rays",
       "event": "Astronomy on Tap",
       "location": "Seattle, WA",
@@ -7,7 +62,7 @@
     },
     
     { "authors": ["Butsky, I."],
-      "title": "Cosmic Rays and Thermal Instability in the Circumgalactic Medium",
+      "title": "Cosmic Rays and Thermal Instability in the CGM",
       "event": "Columbia Astronomy Seminar",
       "location": "New York, NY",
       "url":"",
@@ -15,7 +70,7 @@
      },
 
     { "authors": [ "Butsky, I." ],
-      "title": "Cosmic Rays and Thermal Instability in the Circumgalactic Medium",
+      "title": "Cosmic Rays and Thermal Instability in the CGM",
       "event": "Rutgers University Lunch Talk",
       "location": "New Brunswick, NJ",
       "url":"",
@@ -23,7 +78,7 @@
     },
 
     { "authors": ["Butsky, I."],
-      "title": "Cosmic Rays and Thermal Instability in the Circumgalactic Medium",
+      "title": "Cosmic Rays and Thermal Instability in the CGM",
       "event": "CCA Predoctoral Fellowship Symposium",
       "location": "New York, NY",
       "url": "https://www.youtube.com/watch?v=CaVp5UeMjTk&feature=youtu.be",

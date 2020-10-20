@@ -70,6 +70,9 @@ def manual_exclude(paper):
     if paper.pub == "LPI Contributions":
         return True
 
+    if paper.pub == "Bulletin of the American Astronomical Society":
+        return True
+    
     # Remove DS Tuc duplicate
     if "Four Newborn Planets" in format_title(paper.title[0]) and paper.doi is None:
         return True
