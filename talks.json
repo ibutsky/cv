@@ -1,12 +1,20 @@
 [{"authors": [ "Butsky, I."],
-     "title": "(scheduled) Cosmic Rays and Thermal Instability in the CGM",
+     "title": "Cosmic Rays and Thermal Instability in the CGM",
      "event": "Princeton Galaxy Journal Club",
      "location": "Princeton, NJ (Zoom)",
      "url":"",
      "pubdate": "2020-11"
-},
+ },
+  {"authors": [ "Butsky, I."],
+      "title": "Cosmic Rays and Thermal Instability in the CGM",
+      "event": "STScI Galaxy Journal Club",
+     "location": "Baltimore, MD (Zoom)",
+      "url":"",
+      "pubdate": "2020-10"
+  },
+ 
     {"authors": [ "Butsky, I."],
-      "title": "(scheduled) Cosmic Rays and Thermal Instability in the CGM",
+      "title": "Cosmic Rays and Thermal Instability in the CGM",
       "event": "Caltech TAPIR Seminar",
       "location": "Pasadena, CA (Zoom)",
       "url":"",
@@ -14,26 +22,18 @@
     },
 
      {"authors": [ "Butsky, I."],
-      "title": "(scheduled) Cosmic Rays and Thermal Instability in the CGM",
+      "title": "Cosmic Rays and Thermal Instability in the CGM",
       "event": "KIPAC Tea Talk",
       "location": "Menlo Park, CA (Zoom)",
       "url":"",
       "pubdate": "2020-10"
  },
 
- {"authors": [ "Butsky, I."],
-      "title": "(scheduled) Cosmic Rays and Thermal Instability in the CGM",
-      "event": "STScI Galaxy Journal Club",
-     "location": "Baltimore, MD (Zoom)",
-      "url":"",
-      "pubdate": "2020-10"
-     },
-     
     {"authors": [ "Butsky, I."],
       "title": "Cosmic Rays and Thermal Instability in the CGM",
       "event": "On the Origin, Nature, and Mixing of Multiphase Gas in Astrophysics",
       "location": "KITP, Santa Barbara (Zoom)",
-      "url":"",
+      "url":"https://www.youtube.com/watch?v=Eyw47yN7jxU&ab_channel=KavliInstituteforTheoreticalPhysics",
       "pubdate": "2020-10"
  },
  

@@ -36,6 +36,10 @@ cv_pubs.pdf: cv_pubs.tex luger-cv.cls
 	${LATEX} -interaction=nonstopmode -halt-on-error -jobname=cv_pubs "\input{cv_pubs}"
 	${LATEX} -interaction=nonstopmode -halt-on-error -jobname=cv_pubs "\input{cv_pubs}"
 
+hubble.pdf: hubble_cv.tex hubble-cv.cls pubs.tex talks.tex
+	${LATEX} -interaction=nonstopmode -halt-on-error -jobname=cv_hubble "\def\withpubs{}\def\withother{}\def\withtalks{}\input{hubble_cv}"
+	${LATEX} -interaction=nonstopmode -halt-on-error -jobname=cv_hubble "\def\withpubs{}\def\withother{}\def\withtalks{}\input{hubble_cv}"
+
 download:
 	# Get updated JSON files
 	git clone https://github.com/rodluger/cv && cd cv && git fetch && git checkout master-pdf && cp *.json ../ && cp citedates.txt ../ && cd .. && rm -rf cv

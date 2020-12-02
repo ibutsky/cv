@@ -50,14 +50,14 @@
 \newcommand{\etal}{\foreign{et~al.}}
 \newcommand{\project}[1]{\textsl{#1}}
 \definecolor{grey}{rgb}{0.5,0.5,0.5}
-\newcommand{\deemph}[1]{\textcolor{grey}{\footnotesize{#1}}}
+\newcommand{\deemph}[1]{\textcolor{grey}{\small{#1}}}
 
 % literature links--use doi if you can
 \newcommand{\doi}[2]{\emph{\addfontfeature{Color=grey}\href{http://dx.doi.org/#1}{{#2}}}}
 \newcommand{\link}[2]{\emph{\addfontfeature{Color=notlink}\href{#1}{{#2}}}}
 \newcommand{\ads}[2]{{\addfontfeature{Color=grey}\href{http://adsabs.harvard.edu/abs/#1}}{{#2}}}
 \newcommand{\arxiv}[2]{\emph{\addfontfeature{Color=grey}\href{http://arxiv.org/abs/#1}{{#2}}}}
-\newcommand{\isbn}[1]{{\footnotesize(\textsc{isbn:}{#1})}}
+\newcommand{\isbn}[1]{{\small(\textsc{isbn:}{#1})}}
 
 % Journal names.
 \newcommand{\aj}{AJ}
@@ -101,12 +101,12 @@
 \RequirePackage{parskip}
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
+  \par\vspace{0.8\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
     #1%
   }
-  \par\vspace{\parskip}
+  \par\vspace{0.8\parskip}
 }
 
 \renewcommand{\subsection}[1]{
@@ -121,7 +121,7 @@
   \par\vspace{.25\parskip}%
 }
 
-\pagestyle{empty}
+\pagestyle{empty} % for pagenumbering can use {plain} otherwise use {empty}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,7 +154,7 @@
   #1&\parbox[t]{11.8cm}{%
     \textbf{#2}%
     \hfill%
-    {\textbf{\footnotesize\addfontfeature{Color=lightgray} #3}}\\%
+    {\textbf{\small\addfontfeature{Color=lightgray} #3}}\\%
     #4\vspace{\parsep}%
   }\\}
   
@@ -162,7 +162,7 @@
   #1&\parbox[t]{3cm}{%
     \textbf{#1}%
     \hfill%
-    {\footnotesize #2}\\%
+    {\small #2}\\%
     #3\vspace{\parsep}%
   }\\}
 
